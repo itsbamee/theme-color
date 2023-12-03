@@ -1,6 +1,7 @@
 const colors = ['lightblue', 'pink', 'lightgreen', '#333'];
 
-createPickerDom(colors);
+const btns = createPickerDom(colors);
+console.log(btns);
 
 function createPickerDom(arr) {
 	const aside = document.createElement('aside');
@@ -12,4 +13,6 @@ function createPickerDom(arr) {
 
 	aside.innerHTML = tags;
 	document.body.append(aside);
+
+	return document.querySelectorAll('aside span');
 }
