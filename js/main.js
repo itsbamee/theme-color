@@ -42,6 +42,7 @@ btnReset.addEventListener('click', () => {
 		const colorVal = restCookie.split(' ')[0];
 		setCookie('color', colorVal, 0);
 		document.body.className = '';
+		document.body.style.setProperty('--pointColor', '#333');
 		alert('색상초기화');
 	}
 });
