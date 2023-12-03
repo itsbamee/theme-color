@@ -9,13 +9,14 @@ if (document.cookie.indexOf('color=') < 0) {
 	const pos = document.cookie.indexOf('color=');
 	const restCookie = document.cookie.slice(pos + 6);
 	const colorVal = restCookie.split(' ')[0];
+	document.body.style.setProperty('--pointColor', colorVal);
 	document.body.className = 'theme_' + colorVal;
 }
 
 btnColors.forEach((el, idx) => {
 	el.addEventListener('click', (e) => {
 		const color = e.currentTarget.innerText;
-		console.log(color);
+		// console.log(color);
 		setCookie('color', color, 1);
 		//getcomputedStyle(document.body).getPropertyValue('--pointColor');
 		document.body.style.setProperty('--pointColor', color);
