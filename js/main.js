@@ -26,10 +26,12 @@ btnColors.forEach((el, idx) => {
 
 btnReset.addEventListener('click', () => {
 	const pos = document.cookie.indexOf('color=');
-	if (pos < 0) {
+	if (pos >= 0) {
 		const restCookie = document.cookie.slice(pos + 6);
 		const colorVal = restCookie.split(' ')[0];
 		setCookie('color', colorVal, 0);
+		document.body.className = '';
+		alert('색상초기화');
 	}
 });
 
