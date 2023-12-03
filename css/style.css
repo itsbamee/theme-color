@@ -19,10 +19,23 @@ li {
 
 html {
   font-size: 16px;
+  transition: background-color 1s, color 1s;
 }
 
 :root {
   --pointColor: #333;
+}
+
+.pink {
+  --pointColor: pink;
+}
+
+.lightblue {
+  --pointColor: lightblue;
+}
+
+.lightgreen {
+  --pointColor: lightgreen;
 }
 
 header {
