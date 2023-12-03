@@ -1,5 +1,8 @@
 const colors = ['lightblue', 'pink', 'lightgreen', '#333'];
 const [btnColors, btnReset] = createPickerDom(colors);
+const [inputColor, btnColor] = document.querySelector('nav').children;
+console.log(inputColor);
+console.log(btnColor);
 
 console.log(document.cookie);
 
@@ -22,6 +25,14 @@ btnColors.forEach((el, idx) => {
 		document.body.style.setProperty('--pointColor', color);
 		document.body.className = 'theme_' + color;
 	});
+});
+
+//컬러팔레트에서 테마색상 선택 이벤트
+btnColor.addEventListener('click', () => {
+	const selectedColor = inputColor.value;
+	setCookie('color', selectedColor, 1);
+	document.body.style.setProperty('--pointColor', selectedColor);
+	document.body.className = 'theme_' + selectedColor;
 });
 
 btnReset.addEventListener('click', () => {
