@@ -88,4 +88,24 @@ footer h1 {
   font-size: 1.5rem;
 }
 
+.picker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+}
+.picker span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+  border: 1px solid #777;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */
