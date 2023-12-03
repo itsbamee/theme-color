@@ -1,5 +1,15 @@
-/*
-  1. 사용자에게 보여줄 프리셋 컬러를 선택가능하게 하도록 모달창 띄워줌
-  2. 사용자가 색상 선택시 해당 색상 코드값을 받아서 value형태로 쿠키에 저장 (color=색상값) 기간은 1달만료기간 지정
-  3. 브라우저 접속시 해당 쿠키값으로 body에 클래스명을 변경해서 스타일 분기처리
-*/
+const colors = ['lightblue', 'pink', 'lightgreen', '#333'];
+
+createPickerDom(colors);
+
+function createPickerDom(arr) {
+	const aside = document.createElement('aside');
+	aside.classList.add('picker');
+	let tags = '';
+	arr.forEach((data) => {
+		tags += `<span style='background-color:${data}'>${data}</span>`;
+	});
+
+	aside.innerHTML = tags;
+	document.body.append(aside);
+}
